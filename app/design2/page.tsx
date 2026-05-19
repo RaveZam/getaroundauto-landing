@@ -11,6 +11,7 @@ import { DesignSwitcher } from "@/components/DesignSwitcher";
 export default function Design2() {
   return (
     <>
+    {/* TODO: Add design switcher */}
       <Header />
       <main className="flex-1">
         <Hero />
