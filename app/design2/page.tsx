@@ -13,6 +13,7 @@ export default function Design2() {
     <>
     {/* TODO: Add design switcher */}
       {/* TODO: Add design switcher */}
+       {/* TODO: Add design switcher */}
       <Header />
       <main className="flex-1">
         <Hero />
