@@ -17,7 +17,7 @@ export function Header() {
   }, [open]);
 
   const links: [string, string][] = [
-    ["About", "#about"],
+    ["About Us", "#services"],
     ["Why Us", "#why"],
     ["Visit", "#contact"],
   ];

@@ -21,7 +21,7 @@ const services = [
 
 export function Services() {
   return (
-    <section className="relative py-16 sm:py-24 lg:py-32 bg-ink text-cream overflow-hidden">
+    <section id="services" className="relative py-16 sm:py-24 lg:py-32 bg-ink text-cream overflow-hidden">
       <div aria-hidden className="grain absolute inset-0 pointer-events-none" />
       <div aria-hidden className="awning absolute top-0 left-0 right-0 h-1.5 opacity-90" />
 

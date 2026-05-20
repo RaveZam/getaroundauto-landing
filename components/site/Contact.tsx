@@ -74,7 +74,7 @@ export function Contact() {
 
 function MapEmbed() {
   return (
-    <div className="relative border border-ink/15 rounded-md overflow-hidden bg-paper aspect-[4/3] lg:aspect-[7/6]">
+    <div className="relative border border-ink/15 rounded-md bg-paper aspect-[4/3] lg:aspect-[7/6]">
       <iframe
         title={`Map to ${business.name}`}
         src={`https://www.google.com/maps?q=${encodeURIComponent(business.address.full)}&output=embed`}
@@ -84,7 +84,7 @@ function MapEmbed() {
       />
 
       {/* card overlay */}
-      <div className="hidden sm:block absolute bottom-5 left-5 right-5 sm:right-auto bg-cream border border-ink/15 rounded-md p-4 shadow-lg max-w-xs">
+      <div className="hidden sm:block absolute -top-4 -right-4 left-2 sm:left-auto bg-cream border border-ink/15 rounded-md p-4 shadow-lg max-w-xs">
         <div className="flex items-center gap-3">
           <span className="h-2.5 w-2.5 rounded-full bg-brick" />
           <p className="display text-lg text-ink leading-none">
