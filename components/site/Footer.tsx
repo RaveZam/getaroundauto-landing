@@ -42,7 +42,6 @@ export function Footer() {
           </p>
           <ul className="mt-3 space-y-1.5 text-sm">
             {[
-              ["Inventory", "#inventory"],
               ["About", "#about"],
               ["Why Us", "#why"],
               ["Contact", "#contact"],

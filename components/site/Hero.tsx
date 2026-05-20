@@ -74,10 +74,10 @@ export function Hero() {
                 </span>
               </a>
               <a
-                href="#inventory"
+                href="#contact"
                 className="text-sm font-medium text-ink underline decoration-brick decoration-2 underline-offset-4 hover:text-brick"
               >
-                Browse the lot →
+                Visit the lot →
               </a>
             </div>
 
@@ -98,45 +98,71 @@ export function Hero() {
             </dl>
           </div>
 
-          {/* IMAGE — the lot photo featuring the actual signage */}
-          <div className="lg:col-span-5 relative rise lg:pt-10" style={{ animationDelay: "180ms" }}>
-            <div className="relative rounded-md overflow-hidden shadow-[0_30px_60px_-30px_rgba(15,42,71,0.45)] aspect-[4/5] bg-ink">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/storefront.jpg"
-                alt="The Get Around Auto storefront on Highway 49 in Helena, Arkansas"
-                className="absolute inset-0 h-full w-full object-cover"
-                style={{ objectPosition: "55% 50%" }}
-              />
-              {/* warm color treatment to unify the rough photo */}
-              <div
-                aria-hidden
-                className="absolute inset-0 mix-blend-multiply"
-                style={{
-                  background:
-                    "linear-gradient(180deg, rgba(15,42,71,0.18) 0%, rgba(15,42,71,0.05) 40%, rgba(15,42,71,0.55) 100%)",
-                }}
-              />
-              <div
-                aria-hidden
-                className="absolute inset-0 opacity-25"
-                style={{
-                  backgroundImage:
-                    "repeating-linear-gradient(135deg, rgba(255,255,255,0.06) 0 1px, transparent 1px 14px)",
-                }}
-              />
+          {/* IMAGES — overlapping pair: storefront in front-left, lot behind-right */}
+          <div className="lg:col-span-5 relative rise lg:pt-10 pb-10 lg:pb-6" style={{ animationDelay: "180ms" }}>
+            <div className="relative aspect-[4/5]">
+              {/* BACK image — the lot of cars */}
+              <div className="absolute top-0 right-0 w-[78%] h-[78%] rounded-md overflow-hidden shadow-[0_30px_60px_-30px_rgba(15,42,71,0.5)] ring-1 ring-ink/10 bg-ink">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/5603e3c3-9389-42b3-861b-7e21710422e1.jpeg"
+                  alt="Rows of inspected vehicles on the Get Around Auto lot"
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+                <div
+                  aria-hidden
+                  className="absolute inset-0 mix-blend-multiply"
+                  style={{
+                    background:
+                      "linear-gradient(180deg, rgba(15,42,71,0.10) 0%, rgba(15,42,71,0.0) 40%, rgba(15,42,71,0.45) 100%)",
+                  }}
+                />
+                <div className="absolute top-3 right-3 text-cream">
+                  <span className="inline-flex items-center gap-2 text-[0.6rem] uppercase tracking-[0.28em] bg-ink/55 backdrop-blur-sm px-2.5 py-1.5 rounded-sm">
+                    <span className="h-1.5 w-1.5 rounded-full bg-brick" />
+                    On the lot today
+                  </span>
+                </div>
+              </div>
 
-              {/* caption */}
-              <div className="absolute bottom-3 left-3 right-3 text-cream">
-                <span className="inline-flex items-center gap-2 text-[0.6rem] uppercase tracking-[0.28em] bg-ink/55 backdrop-blur-sm px-2.5 py-1.5 rounded-sm">
-                  <span className="h-1.5 w-1.5 rounded-full bg-brick" />
-                  1150 Hwy 49 W · Helena, AR
-                </span>
+              {/* FRONT image — the storefront, overlapping bottom-left */}
+              <div className="absolute bottom-0 left-0 w-[54%] aspect-[3/4] rounded-md overflow-hidden shadow-[0_30px_60px_-20px_rgba(15,42,71,0.55)] ring-4 ring-cream bg-ink">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/6377f826-5436-48c9-b0f9-7b316f135c4a.jpeg"
+                  alt="The Get Around Auto office on Highway 49 in Helena, Arkansas"
+                  className="absolute inset-0 h-full w-full object-cover"
+                  style={{ objectPosition: "50% 45%" }}
+                />
+                <div
+                  aria-hidden
+                  className="absolute inset-0 opacity-20"
+                  style={{
+                    backgroundImage:
+                      "repeating-linear-gradient(135deg, rgba(255,255,255,0.06) 0 1px, transparent 1px 14px)",
+                  }}
+                />
+                <div className="absolute bottom-2 left-2 right-2 text-cream">
+                  <span className="inline-flex items-center gap-2 text-[0.6rem] uppercase tracking-[0.28em] bg-ink/55 backdrop-blur-sm px-2.5 py-1.5 rounded-sm">
+                    <span className="h-1.5 w-1.5 rounded-full bg-brick" />
+                    1150 Hwy 49 W
+                  </span>
+                </div>
+              </div>
+
+              {/* corner badge */}
+              <div className="absolute -top-5 -right-5 h-24 w-24 rounded-full bg-brick text-cream grid place-items-center text-center rotate-[8deg] shadow-lg z-10">
+                <div>
+                  <div className="display text-2xl leading-none">Est.</div>
+                  <div className="text-[0.6rem] uppercase tracking-[0.25em] mt-1">
+                    Helena AR
+                  </div>
+                </div>
               </div>
             </div>
 
             {/* sticker */}
-            <div className="absolute -bottom-6 -left-6 bg-cream border border-ink/15 rounded-md px-4 py-3 shadow-md max-w-[14rem]">
+            <div className="hidden lg:block absolute -bottom-2 right-0 bg-cream border border-ink/15 rounded-md px-4 py-3 shadow-md max-w-[14rem]">
               <div className="eyebrow-rule mb-2 text-ink/80 before:bg-ink/40">
                 Stop by
               </div>
@@ -146,15 +172,6 @@ export function Hero() {
                 {business.address.city}, {business.address.state}{" "}
                 {business.address.zip}
               </p>
-            </div>
-            {/* corner badge */}
-            <div className="absolute -top-5 -right-5 h-24 w-24 rounded-full bg-brick text-cream grid place-items-center text-center rotate-[8deg] shadow-lg">
-              <div>
-                <div className="display text-2xl leading-none">Est.</div>
-                <div className="text-[0.6rem] uppercase tracking-[0.25em] mt-1">
-                  Helena AR
-                </div>
-              </div>
             </div>
           </div>
         </div>

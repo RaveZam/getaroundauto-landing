@@ -19,7 +19,6 @@ export function Header() {
 
         <nav className="hidden md:flex items-center gap-7 text-sm text-ink/80 ml-6">
           {[
-            ["Inventory", "#inventory"],
             ["About", "#about"],
             ["Why Us", "#why"],
             ["Visit", "#contact"],
@@ -38,10 +37,10 @@ export function Header() {
         <div className="ml-auto flex items-center gap-3">
           <PhoneLink className="hidden sm:inline-flex text-sm font-medium text-ink hover:text-brick transition-colors" />
           <a
-            href="#inventory"
+            href="#contact"
             className="inline-flex items-center gap-2 bg-ink text-cream px-3.5 py-2 text-xs uppercase tracking-[0.2em] font-medium hover:bg-brick transition-colors rounded-md"
           >
-            View Lot
+            Visit Us
             <svg viewBox="0 0 16 16" className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth="1.6">
               <path d="M3 8h10M9 4l4 4-4 4" />
             </svg>

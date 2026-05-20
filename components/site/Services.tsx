@@ -2,8 +2,8 @@ const services = [
   {
     name: "Pre-owned sales",
     body: "Trucks, sedans, and SUVs from $10K and up. Every one inspected, road-tested, and priced to move.",
-    cta: "See the lot",
-    href: "#inventory",
+    cta: "Come visit",
+    href: "#contact",
   },
   {
     name: "Trade-ins",
