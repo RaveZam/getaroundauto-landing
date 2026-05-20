@@ -18,17 +18,29 @@ export function Hero() {
         className="absolute -top-32 -right-24 h-[420px] w-[420px] rounded-full bg-brick/10 blur-3xl"
       />
 
-      <div className="relative mx-auto max-w-[1240px] px-6 lg:px-10 pt-14 lg:pt-20 pb-16 lg:pb-24">
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+      <div className="relative mx-auto max-w-[1240px] px-5 sm:px-6 lg:px-10 pt-10 sm:pt-14 lg:pt-6 pb-12 sm:pb-16 lg:pb-24">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-14 items-center">
           {/* COPY */}
           <div className="lg:col-span-7 rise">
-            <div className="flex items-center gap-3 mb-7">
-              <span className="eyebrow-rule">
+            <div className="flex items-center gap-3 mb-4 sm:mb-7">
+              <span className="eyebrow-rule whitespace-nowrap text-[0.34rem] sm:text-[0.72rem] tracking-[0.12em] sm:tracking-[0.22em] gap-1 sm:gap-3 before:!w-1.5 sm:before:!w-5">
                 {business.established} · 1150 Hwy 49 W
               </span>
             </div>
 
-            <h1 className="display text-[clamp(3rem,7.4vw,6.5rem)] text-ink">
+            <div className="flex flex-wrap gap-2 mb-6">
+              {business.services.map((s) => (
+                <span
+                  key={s}
+                  className="inline-flex items-center gap-1.5 sm:gap-2 rounded-full border border-ink/15 bg-cream/70 px-2 sm:px-3 py-0.5 sm:py-1 text-[0.5rem] sm:text-[0.65rem] uppercase tracking-[0.18em] sm:tracking-[0.22em] text-ink/80"
+                >
+                  <span className="h-1 w-1 sm:h-1.5 sm:w-1.5 rounded-full bg-brick" />
+                  {s}
+                </span>
+              ))}
+            </div>
+
+            <h1 className="display text-[clamp(3rem,12vw,6.5rem)] leading-[1.02] sm:leading-[1.04] text-ink">
               Honest cars,
               <br />
               <span className="relative inline-block">
@@ -47,31 +59,37 @@ export function Hero() {
                 </svg>
               </span>
               <br />
-              right here in Helena.
+              right here in West Helena.
             </h1>
 
-            <p className="mt-10 max-w-xl text-[1.05rem] leading-relaxed text-muted">
+            <p className="mt-5 sm:mt-10 max-w-xl text-[0.85rem] sm:text-[1.05rem] leading-relaxed text-muted">
               We hand-pick every vehicle on the lot. No pressure, no surprises —
               just dependable trucks, sedans, and SUVs ready to get you
               wherever you&apos;re going.
             </p>
 
-            <div className="mt-9 flex flex-wrap items-center gap-4">
+            <div className="mt-7 sm:mt-9 flex flex-wrap items-center gap-x-5 gap-y-3 sm:gap-4">
               <a
                 href={business.phoneHref}
-                className="group inline-flex items-center gap-3 bg-ink text-cream pl-5 pr-3 py-3.5 rounded-md hover:bg-brick transition-colors"
+                className="group inline-flex items-center gap-2.5 sm:gap-3 bg-ink text-cream pl-3.5 sm:pl-5 pr-2.5 sm:pr-3 py-2.5 sm:py-3.5 rounded-md hover:bg-brick transition-colors text-sm sm:text-base"
               >
-                <span className="text-xs uppercase tracking-[0.22em] opacity-70">
+                <span className="text-[0.6rem] sm:text-xs uppercase tracking-[0.22em] opacity-70">
                   Call the lot
                 </span>
                 <span className="tabular-nums font-medium">
                   {business.phone}
                 </span>
-                <span className="inline-flex h-7 w-7 items-center justify-center bg-cream/15 rounded-sm group-hover:translate-x-0.5 transition-transform">
+                <span className="inline-flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center bg-cream/15 rounded-sm group-hover:translate-x-0.5 transition-transform">
                   <svg viewBox="0 0 16 16" className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth="1.8">
                     <path d="M3 8h10M9 4l4 4-4 4" />
                   </svg>
                 </span>
+              </a>
+              <a
+                href={business.phoneAltHref}
+                className="text-sm font-medium text-ink hover:text-brick tabular-nums"
+              >
+                or {business.phoneAlt}
               </a>
               <a
                 href="#contact"
@@ -82,15 +100,15 @@ export function Hero() {
             </div>
 
             {/* mini stat row */}
-            <dl className="mt-14 grid grid-cols-3 max-w-md border-t border-rule pt-6">
+            <dl className="mt-10 sm:mt-14 grid grid-cols-3 gap-4 max-w-md mx-auto sm:mx-0 border-t border-rule pt-6 text-center sm:text-left">
               {[
                 ["40+", "On the lot"],
                 ["100%", "Inspected"],
                 ["1-on-1", "Service"],
               ].map(([n, l]) => (
                 <div key={l}>
-                  <dt className="display text-3xl text-ink">{n}</dt>
-                  <dd className="mt-1 text-[0.65rem] uppercase tracking-[0.22em] text-muted">
+                  <dt className="display text-2xl sm:text-3xl text-ink">{n}</dt>
+                  <dd className="mt-1 text-[0.6rem] sm:text-[0.65rem] uppercase tracking-[0.2em] sm:tracking-[0.22em] text-muted">
                     {l}
                   </dd>
                 </div>
@@ -99,7 +117,7 @@ export function Hero() {
           </div>
 
           {/* IMAGES — overlapping pair: storefront in front-left, lot behind-right */}
-          <div className="lg:col-span-5 relative rise lg:pt-10 pb-10 lg:pb-6" style={{ animationDelay: "180ms" }}>
+          <div className="lg:col-span-5 relative rise lg:pt-10 pt-2 pb-10 lg:pb-6 mr-4 sm:mr-0" style={{ animationDelay: "180ms" }}>
             <div className="relative aspect-[4/5]">
               {/* BACK image — the lot of cars */}
               <div className="absolute top-0 right-0 w-[78%] h-[78%] rounded-md overflow-hidden shadow-[0_30px_60px_-30px_rgba(15,42,71,0.5)] ring-1 ring-ink/10 bg-ink">
@@ -130,7 +148,7 @@ export function Hero() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/images/6377f826-5436-48c9-b0f9-7b316f135c4a.jpeg"
-                  alt="The Get Around Auto office on Highway 49 in Helena, Arkansas"
+                  alt="The Get Around Auto office on Highway 49 in West Helena, Arkansas"
                   className="absolute inset-0 h-full w-full object-cover"
                   style={{ objectPosition: "50% 45%" }}
                 />
@@ -151,11 +169,11 @@ export function Hero() {
               </div>
 
               {/* corner badge */}
-              <div className="absolute -top-5 -right-5 h-24 w-24 rounded-full bg-brick text-cream grid place-items-center text-center rotate-[8deg] shadow-lg z-10">
+              <div className="absolute -top-4 -right-2 sm:-top-5 sm:-right-5 h-20 w-20 sm:h-24 sm:w-24 rounded-full bg-brick text-cream grid place-items-center text-center rotate-[8deg] shadow-lg z-10">
                 <div>
-                  <div className="display text-2xl leading-none">Est.</div>
-                  <div className="text-[0.6rem] uppercase tracking-[0.25em] mt-1">
-                    Helena AR
+                  <div className="display text-xl sm:text-2xl leading-none">Est.</div>
+                  <div className="text-[0.55rem] sm:text-[0.6rem] uppercase tracking-[0.22em] sm:tracking-[0.25em] mt-1">
+                    West Helena AR
                   </div>
                 </div>
               </div>

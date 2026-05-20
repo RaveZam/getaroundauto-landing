@@ -5,18 +5,19 @@ export const business = {
   phoneHref: "tel:+18702261073",
   phoneAlt: "870-340-1159",
   phoneAltHref: "tel:+18703401159",
-  tagline: "Buy Here · Pay Here · Cash Cars",
+  tagline: "Cash Cars · Buy Here Pay Here · Refinance",
+  services: ["Cash Cars", "Buy Here Pay Here", "Refinance"],
   address: {
     street: "1150 Highway 49 West",
-    city: "Helena",
+    city: "West Helena",
     state: "Arkansas",
     zip: "72390",
-    full: "1150 Highway 49 West, Helena, Arkansas 72390",
+    full: "1150 Highway 49 West, West Helena, Arkansas 72390",
   },
   hours: [
     { day: "Monday – Friday", time: "9:00 AM – 6:00 PM" },
     { day: "Saturday", time: "9:00 AM – 4:00 PM" },
     { day: "Sunday", time: "By appointment" },
   ],
-  established: "Est. Helena, AR",
+  established: "Est. West Helena, AR",
 } as const;

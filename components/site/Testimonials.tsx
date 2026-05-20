@@ -21,22 +21,22 @@ const quotes = [
 
 export function Testimonials() {
   return (
-    <section className="relative py-24 lg:py-32">
-      <div className="mx-auto max-w-[1240px] px-6 lg:px-10">
-        <div className="flex items-end justify-between flex-wrap gap-6 mb-14">
+    <section className="relative py-16 sm:py-24 lg:py-32">
+      <div className="mx-auto max-w-[1240px] px-5 sm:px-6 lg:px-10">
+        <div className="flex items-end justify-between flex-wrap gap-6 mb-10 sm:mb-14">
           <div>
             <span className="eyebrow-rule">Word of mouth</span>
-            <h2 className="display text-5xl lg:text-6xl mt-4 text-ink max-w-xl">
+            <h2 className="display text-4xl sm:text-5xl lg:text-6xl mt-4 text-ink max-w-xl">
               From folks who&apos;ve already pulled off the lot.
             </h2>
           </div>
         </div>
 
-        <ul className="grid md:grid-cols-3 gap-6">
+        <ul className="grid sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6">
           {quotes.map((q, i) => (
             <li
               key={i}
-              className="relative bg-paper border border-rule rounded-md p-7 flex flex-col"
+              className="relative bg-paper border border-rule rounded-md p-6 sm:p-7 flex flex-col"
             >
               <span className="display text-7xl text-brick leading-none -mt-1 mb-2">
                 &ldquo;

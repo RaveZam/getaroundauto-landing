@@ -21,17 +21,17 @@ const services = [
 
 export function Services() {
   return (
-    <section className="relative py-24 lg:py-32 bg-ink text-cream overflow-hidden">
+    <section className="relative py-16 sm:py-24 lg:py-32 bg-ink text-cream overflow-hidden">
       <div aria-hidden className="grain absolute inset-0 pointer-events-none" />
       <div aria-hidden className="awning absolute top-0 left-0 right-0 h-1.5 opacity-90" />
 
-      <div className="relative mx-auto max-w-[1240px] px-6 lg:px-10">
-        <div className="grid lg:grid-cols-12 gap-10 items-end">
+      <div className="relative mx-auto max-w-[1240px] px-5 sm:px-6 lg:px-10">
+        <div className="grid lg:grid-cols-12 gap-6 sm:gap-10 items-end">
           <div className="lg:col-span-7">
             <span className="eyebrow-rule text-brick before:bg-brick">
               What we do
             </span>
-            <h2 className="display text-5xl lg:text-6xl mt-4">
+            <h2 className="display text-4xl sm:text-5xl lg:text-6xl mt-4">
               Three things, done{" "}
               <span className="italic font-light">properly</span>.
             </h2>
@@ -42,23 +42,23 @@ export function Services() {
           </p>
         </div>
 
-        <ol className="mt-16 grid lg:grid-cols-3 gap-6">
+        <ol className="mt-12 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {services.map((s, i) => (
             <li
               key={s.name}
-              className="group relative border border-cream/15 rounded-md p-8 bg-ink-2/40 hover:bg-ink-2 transition-colors"
+              className="group relative border border-cream/15 rounded-md p-6 sm:p-8 bg-ink-2/40 hover:bg-ink-2 transition-colors"
             >
-              <span className="absolute -top-3 left-6 bg-brick text-cream text-[0.65rem] uppercase tracking-[0.28em] px-2.5 py-1 rounded-sm">
+              <span className="absolute -top-3 left-5 sm:left-6 bg-brick text-cream text-[0.6rem] sm:text-[0.65rem] uppercase tracking-[0.24em] sm:tracking-[0.28em] px-2.5 py-1 rounded-sm">
                 {String(i + 1).padStart(2, "0")} / 03
               </span>
-              <h3 className="display text-3xl mt-3">{s.name}</h3>
+              <h3 className="display text-2xl sm:text-3xl mt-3">{s.name}</h3>
               <p
                 className="mt-4 text-sm leading-relaxed text-cream/75"
                 dangerouslySetInnerHTML={{ __html: s.body }}
               />
               <a
                 href={s.href}
-                className="mt-8 inline-flex items-center gap-2 text-xs uppercase tracking-[0.22em] font-medium text-cream group-hover:text-brick transition-colors"
+                className="mt-6 sm:mt-8 inline-flex items-center gap-2 text-xs uppercase tracking-[0.22em] font-medium text-cream group-hover:text-brick transition-colors"
               >
                 {s.cta}
                 <svg viewBox="0 0 16 16" className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth="1.8">

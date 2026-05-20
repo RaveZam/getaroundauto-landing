@@ -46,20 +46,20 @@ const pillars = [
 
 export function WhyChooseUs() {
   return (
-    <section id="why" className="relative py-24 lg:py-32">
-      <div className="mx-auto max-w-[1240px] px-6 lg:px-10">
+    <section id="why" className="relative py-16 sm:py-24 lg:py-32">
+      <div className="mx-auto max-w-[1240px] px-5 sm:px-6 lg:px-10">
         <div className="max-w-2xl">
           <span className="eyebrow-rule">Why folks come back</span>
-          <h2 className="display text-5xl lg:text-6xl mt-4 text-ink">
+          <h2 className="display text-4xl sm:text-5xl lg:text-6xl mt-4 text-ink">
             Four reasons it&rsquo;s easier here.
           </h2>
         </div>
 
-        <ul className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-rule border border-rule rounded-md overflow-hidden">
+        <ul className="mt-10 sm:mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-rule border border-rule rounded-md overflow-hidden">
           {pillars.map((p) => (
             <li
               key={p.n}
-              className="bg-cream p-7 lg:p-8 flex flex-col gap-5 hover:bg-paper transition-colors"
+              className="bg-cream p-6 sm:p-7 lg:p-8 flex flex-col gap-4 sm:gap-5 hover:bg-paper transition-colors"
             >
               <div className="flex items-start justify-between">
                 <span className="display text-3xl text-brick">{p.n}</span>

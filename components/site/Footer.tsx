@@ -5,16 +5,16 @@ export function Footer() {
   return (
     <footer className="relative bg-ink text-cream/80 overflow-hidden">
       <div aria-hidden className="awning h-1.5 w-full" />
-      <div className="mx-auto max-w-[1240px] px-6 lg:px-10 py-16 grid lg:grid-cols-12 gap-10">
-        <div className="lg:col-span-5">
-          <p className="display text-4xl text-cream">{business.name}</p>
+      <div className="mx-auto max-w-[1240px] px-5 sm:px-6 lg:px-10 py-12 sm:py-16 grid grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10">
+        <div className="col-span-2 lg:col-span-5">
+          <p className="display text-3xl sm:text-4xl text-cream">{business.name}</p>
           <p className="mt-3 text-sm text-cream/60 max-w-sm leading-relaxed">
             A family-run lot on Highway 49 selling hand-picked, road-tested
             used cars to neighbors across the Arkansas Delta.
           </p>
         </div>
 
-        <div className="lg:col-span-3">
+        <div className="col-span-2 sm:col-span-1 lg:col-span-3">
           <p className="text-[0.6rem] uppercase tracking-[0.28em] text-cream/40">
             Visit
           </p>
@@ -26,7 +26,7 @@ export function Footer() {
           </p>
         </div>
 
-        <div className="lg:col-span-2">
+        <div className="col-span-1 lg:col-span-2">
           <p className="text-[0.6rem] uppercase tracking-[0.28em] text-cream/40">
             Call
           </p>
@@ -34,9 +34,15 @@ export function Footer() {
             className="mt-3 text-sm text-cream/90 hover:text-brick transition-colors"
             showIcon={false}
           />
+          <a
+            href={business.phoneAltHref}
+            className="mt-1 block text-sm text-cream/70 hover:text-brick tabular-nums"
+          >
+            {business.phoneAlt}
+          </a>
         </div>
 
-        <div className="lg:col-span-2">
+        <div className="col-span-1 lg:col-span-2">
           <p className="text-[0.6rem] uppercase tracking-[0.28em] text-cream/40">
             Browse
           </p>
@@ -60,9 +66,9 @@ export function Footer() {
       </div>
 
       <div className="border-t border-cream/10">
-        <div className="mx-auto max-w-[1240px] px-6 lg:px-10 py-5 flex flex-wrap items-center justify-between gap-3 text-[0.65rem] uppercase tracking-[0.25em] text-cream/50">
+        <div className="mx-auto max-w-[1240px] px-5 sm:px-6 lg:px-10 py-5 flex flex-wrap items-center justify-between gap-3 text-[0.6rem] sm:text-[0.65rem] uppercase tracking-[0.22em] sm:tracking-[0.25em] text-cream/50">
           <span>© {new Date().getFullYear()} {business.name}</span>
-          <span>Helena · Arkansas · Hwy 49 W</span>
+          <span>West Helena · Arkansas · Hwy 49 W</span>
         </div>
       </div>
     </footer>
